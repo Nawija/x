@@ -1,0 +1,22 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+
+.globalWrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.navToggle{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    z-index: 999;
+}
