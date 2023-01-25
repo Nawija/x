@@ -63,88 +63,89 @@
 
 
 
-<section id="contact">
-  <div class="bg-white py-6 sm:py-8 lg:py-12">
-    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
-      <!-- text - start -->
-      <div class="mb-10 md:mb-16">
-        <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Wyślij Pytanie</h2>
+  <section id="contact">
+    <div class="bg-white py-6 sm:py-8 lg:py-12">
+      <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+        <!-- text - start -->
+        <div class="mb-10 md:mb-16">
+          <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Formularz Kontaktowy</h2>
 
-        <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">This is a section of some simple filler
-          text, also known as placeholder text. It shares some characteristics of a real written text but is random or
-          otherwise generated.</p>
+          <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto"> Skorzystaj z naszego formularza
+            kontaktowego, aby wysłać do nas wiadomość. Prosimy o podanie swoich danych kontaktowych oraz treści
+            wiadomości, a my postaramy się odpowiedzieć na nią jak najszybciej. Jesteśmy do Twojej dyspozycji i z
+            przyjemnością odpowiemy na wszystkie Twoje pytania.</p>
+        </div>
+        <!-- text - end -->
+
+        <!-- form - start -->
+        <form action="https://formsubmit.io/send/	f63b5dd7-d162-4517-bc44-4896e0b95bc8" method="POST"
+          class="max-w-screen-md grid sm:grid-cols-2 gap-4 mx-auto">
+          <div>
+
+            <input name="_redirect" type="hidden" id="name" value="https://nawija.github.io/x/src/html/dziekujemy.html">
+
+            <label for="first-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Imię</label>
+            <input name="first-name" placeholder="Imię"
+              class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+          </div>
+
+          <div>
+            <label for="last-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Nazwisko</label>
+            <input name="last-name" placeholder="Nazwisko"
+              class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="email" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Email</label>
+            <input name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" placeholder="email@bopple.pl"
+              class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="subject" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Tytuł</label>
+            <input name="subject"
+              class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+          </div>
+          <div>
+            <label for="phone" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Tel</label>
+            <input name="phone" type="tel" placeholder="+48 521 521 500" pattern="[0-9+]{9,12}"
+              required
+              class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+          </div>
+
+          <div>
+            <label for="choosePlan" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Wybierz Plan</label>
+            <a
+              class="text-indigo-400 inline-block rounded-full ml-2 text-xs underline" href="../../index.html#price">Cennik</a>
+            <select name="choosePlan"
+              class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2">
+              <option>Start</option>
+              <option>Pro</option>
+              <option>Special</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="message" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Wiadomość</label>
+            <textarea name="message"
+              class="w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"></textarea>
+          </div>
+
+          <div class="sm:col-span-2 flex justify-between items-center">
+            <p class="text-gray-400 text-xs">Zapoznaj sie również z naszym <a href="#"
+                class="hover:text-indigo-500 active:text-indigo-600 underline transition duration-100 text-gray-800">Regulaminem</a>.
+            </p>
+            <button
+              class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Wyślij</button>
+
+          </div>
+
+
+        </form>
+        <!-- form - end -->
       </div>
-      <!-- text - end -->
-
-      <!-- form - start -->
-      <form action="https://formsubmit.io/send/	f63b5dd7-d162-4517-bc44-4896e0b95bc8" method="POST"
-        class="max-w-screen-md grid sm:grid-cols-2 gap-4 mx-auto">
-        <div>
-
-          <input name="_redirect" type="hidden" id="name" value="https://nawija.github.io/bopple/#">
-          
-          <label for="first-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Imię</label>
-          <input name="first-name"
-            class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
-        </div>
-
-        <div>
-          <label for="last-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Nazwisko</label>
-          <input name="last-name"
-            class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
-        </div>
-
-        <div class="sm:col-span-2">
-          <label for="email" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Email</label>
-          <input name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="email@bopple.pl"
-            class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
-        </div>
-
-        <div class="sm:col-span-2">
-          <label for="subject" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Tytuł</label>
-          <input name="subject"
-            class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
-        </div>
-        <div>
-          <label for="phone" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Tel</label>
-          <input name="phone" type="tel" placeholder="+48-555-555-555" pattern="[0-9+]{3}[0-9]{3}[0-9]{3}[0-9]{3}"
-            required
-            class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
-        </div>
-
-        <div>
-          <label for="choosePlan" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Wybierz Plan</label>
-          <select name="choosePlan"
-            class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2">
-            <option>Start</option>
-            <option>Pro</option>
-            <option>Special</option>
-          </select>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label for="message" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Wiadomość</label>
-          <textarea name="message"
-            class="w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"></textarea>
-        </div>
-
-        <input name="_formsubmit_id" type="text" style="display:none">
-
-        <div class="sm:col-span-2 flex justify-between items-center">
-          <span class="text-gray-500 text-sm">*Required</span>
-          <button
-            class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Wyślij</button>
-
-        </div>
-
-        <p class="text-gray-400 text-xs">Zapoznaj sie również z naszym <a href="#"
-            class="hover:text-indigo-500 active:text-indigo-600 underline transition duration-100">Regulaminem</a>.
-        </p>
-      </form>
-      <!-- form - end -->
     </div>
-  </div>
-</section>
+  </section>
 
 
 
