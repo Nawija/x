@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/loader.css">
   <link rel="stylesheet" href="../css/swiper.css">
   <link rel="stylesheet" href="../css/build.css">
   <link rel="stylesheet" href="../css/global.css">
@@ -12,49 +13,70 @@
 </head>
 
 <body>
-  <header id="header" class="flex justify-between items-center py-4 md:py-8 sticky top-0 z-50 bg-white">
-    <div class="globalWrapper flex justify-between w-full px-6 md:px-8 lg:px-12">
-      <!-- logo - start -->
-      <a href="../../index.html" class="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5"
-        aria-label="logo">
-        <svg width="95" height="94" viewBox="0 0 95 94" class="w-6 h-auto text-indigo-500" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M96 0V47L48 94H0V47L48 0H96Z" />
-        </svg>
-        Bopple
-      </a>
-      <!-- logo - end -->
+ <div class="loader">
+  <div class="ldiv"></div>
+ </div>
 
-      <!-- nav - start -->
-      <nav id="nav" class="hidden lg:flex items-center bg-white">
-        <ul id="navList" class="lg:flex">
-          <a href="../../index.html" class="text-indigo-500 text-base lg:text-lg font-semibold p-2">Home</a>
-          <a href="../../index.html#price"
-            class="text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 navLinks p-2">Cennik</a>
-          <a href="../html/gallery.html"
-            class="text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 navLinks p-2">Galeria</a>
-          <a href="./contact.html"
-            class="text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 navLinks p-2">Kontakt</a>
-        </ul>
+ <div class="content hidden">
+    <!-- start header nav -->
+
+    <header id="header" class="sticky top-0 z-50 bg-white">
+      <nav>
+        <div class="globalWrapper flex py-4 md:py-8 bg-white justify-between w-full px-6 md:px-8 lg:px-12">
+          <!-- logo - start -->
+          <a href="../../index.html" class="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5"
+            aria-label="logo">
+            <svg width="95" height="94" viewBox="0 0 95 94" class="w-6 h-auto text-indigo-500" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M96 0V47L48 94H0V47L48 0H96Z" />
+            </svg>
+            Bopple
+          </a>
+          <!-- logo - end -->
+
+
+
+          <ul id="navList"
+            class="absolute left-0 -top-[400%] flex items-center justify-center w-full flex-col bg-white opacity-0 transition-all duration-500 z-[-1] lg:static lg:flex-row lg:opacity-100 lg:w-auto lg:z-[50]">
+            <li class="m-6 lg:m-0"><a href="../../index.html"
+                class=" text-indigo-500 text-base lg:text-lg font-semibold p-2">Home</a></li>
+            <li class="m-6 lg:m-0"><a href="../../index.html#price"
+                class=" text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 priceSection p-2">Cennik</a>
+            </li>
+            <li class="m-6 lg:m-0"><a href="#"
+                class=" text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2">Galeria</a>
+            </li>
+            <li class="m-6 lg:m-0"><a href="./contact.html"
+                class=" text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2">Kontakt</a>
+            </li>
+            <li class="mb-12 mt-6 lg:hidden">
+              <a href="./freeQuote.html"
+                class="bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-200 px-8 py-3 hover:text-white hover:shadow-inner my-12">Darmowa
+                Wycena</a>
+            </li>
+          </ul>
+
+
+          <a href="./freeQuote.html"
+            class="hidden lg:inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3 hover:text-white hover:shadow-inner">Darmowa
+            Wycena</a>
+
+
+
+          <button id="burger" type="button"
+            class="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="b h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="hidden x ionicon h-6 w-6" viewBox="0 0 512 512"><title>Close</title><path d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"/></svg>
+          </button>
+        </div>
       </nav>
-      <!-- nav - end -->
+    </header>
 
-      <!-- buttons - start -->
-      <a href="./freeQuote.html"
-        class="hidden lg:inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Darmowa
-        Wycena</a>
-
-      <button id="burger" type="button"
-        class="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd" />
-        </svg>
-      </button>
-      <!-- buttons - end -->
-    </div>
-  </header>
+    <!-- end header nav -->
 
 
 
@@ -70,24 +92,24 @@
       <div class="flex flex-wrap md:-m-2 -m-1">
         <div class="flex flex-wrap w-1/2">
           <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://source.unsplash.com/user/wsanter">
           </div>
           <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://source.unsplash.com/random/?city,night">
           </div>
           <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://source.unsplash.com/random/900×700/?fruit">
           </div>
         </div>
         <div class="flex flex-wrap w-1/2">
           <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://source.unsplash.com/user/wsanter">
           </div>
           <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://source.unsplash.com/user/wsanter">
           </div>
           <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://source.unsplash.com/user/wsanter">
           </div>
         </div>
       </div>
@@ -104,7 +126,7 @@
       <div class="flex flex-wrap -m-4">
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -113,7 +135,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/random/900×700/?fruit">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -122,7 +144,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -131,7 +153,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -140,7 +162,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/424x264">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -149,7 +171,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/425x265">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -158,7 +180,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/427x267">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -167,7 +189,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -176,7 +198,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -185,7 +207,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -194,7 +216,7 @@
         </div>
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/user/wsanter">
           </a>
           <div class="mt-4">
             <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -297,9 +319,11 @@
         </div>
     </div>
   </footer>
+ </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="../js/loader.js"></script>
   <script src="../js/swiper.js"></script>
   <script src="../js/navigation.js"></script>
 </body>
