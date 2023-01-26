@@ -1,7 +1,7 @@
 const header = document.getElementById("header");
 const navList = document.getElementById("navList");
 const allLinks = document.querySelectorAll("a");
-const priceSection = document.querySelectorAll(".priceSection");
+// const priceSection = document.querySelectorAll(".priceSection");
 const burger = document.getElementById("burger");
 
 // svg icons burger and close
@@ -16,21 +16,21 @@ window.addEventListener("scroll", () => {
     }
 });
 
-for (const link of priceSection) {
-    link.addEventListener("click", scrollToSection);
-}
+// for (const link of priceSection) {
+//     link.addEventListener("click", scrollToSection);
+// }
 
-function scrollToSection(e) {
-    e.preventDefault();
-    const href = this.getAttribute("href");
-    const offsetTop = document.querySelector(href).offsetTop;
-    const headerHeight = document.querySelector("#header").offsetHeight;
+// function scrollToSection(e) {
+//     e.preventDefault();
+//     const href = this.getAttribute("href");
+//     const offsetTop = document.querySelector(href).offsetTop;
+//     const headerHeight = document.querySelector("#header").offsetHeight;
 
-    scroll({
-        top: offsetTop - headerHeight,
-        behavior: "smooth",
-    });
-}
+//     scroll({
+//         top: offsetTop - headerHeight,
+//         behavior: "smooth",
+//     });
+// }
 
 burger.addEventListener("click", () => {
     x.classList.toggle("hidden");
