@@ -8,12 +8,12 @@ const swiper = new Swiper(".mySwiper", {
     disableOnInteraction: true
   },
   loop: true,
-  speed: 2000,
+  speed: 100,
   coverflowEffect: {
     rotate: 33,
-    stretch: -50,
+    stretch: -10,
     depth: -150,
-    modifier: 1,
+    modifier: .8,
     slideShadows: false,
   },
   pagination: {
