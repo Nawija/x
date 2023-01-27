@@ -1,7 +1,9 @@
 .swiperWrapper {
     position: relative;
     height: 100%;
-  background: #5154D3;
+    background: -moz-linear-gradient(90deg, rgba(115,87,255,1) 0%, rgba(88,69,255,1) 40%, rgba(0,30,138,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(115,87,255,1) 0%, rgba(88,69,255,1) 40%, rgba(0,30,138,1) 100%);
+    background: linear-gradient(90deg, rgba(115,87,255,1) 0%, rgba(88,69,255,1) 40%, rgba(0,30,138,1) 100%);
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;

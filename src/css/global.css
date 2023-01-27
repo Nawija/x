@@ -24,7 +24,11 @@ html{
 .x{
     fill: rgb(94, 94, 94);
 }
-
+footer{
+    background: -moz-linear-gradient(219deg, rgba(105,80,232,1) 0%, rgba(118,103,255,1) 40%, rgba(105,0,175,1) 100%);
+background: -webkit-linear-gradient(219deg, rgba(105,80,232,1) 0%, rgba(118,103,255,1) 40%, rgba(105,0,175,1) 100%);
+background: linear-gradient(219deg, rgba(105,80,232,1) 0%, rgba(118,103,255,1) 40%, rgba(105,0,175,1) 100%);
+}
 /* input:invalid {
     border-bottom: rgb(216, 94, 94) solid 2px;
   } */
