@@ -1,14 +1,15 @@
 .loader {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
     background-color: rgb(255, 255, 255);
     overflow: hidden;
 }
 .ldiv {
-    position: relative;
+    margin-top: -20vh;
     height: 100px;
     width: 100px;
     border: 5px dotted white;
